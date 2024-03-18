@@ -4,9 +4,13 @@ use petgraph::dot::Dot;
 use petgraph::algo::find_negative_cycle;
 use petgraph::prelude::*;
 
-pub fn identify_arbitrage(data: String) {
+pub fn identify_arbitrage(prices: String) {
+    
+    // Uncomment the following line to use a mock JSON file for testing.
+    // prices = fs::read_to_string("./mock_prices.json")
+    //     .expect("Unable to read file"); 
 
-    let json: Vec<Value> = serde_json::from_str(&data)
+    let json: Vec<Value> = serde_json::from_str(&prices)
         .expect("JSON does not have correct format.");
 
     let mut graph = Graph::new_undirected();
