@@ -16,10 +16,3 @@ fn main() {
     identify_arbitrage( prices.unwrap());
     
 }
-
-/*
-bgcolor="#1a1a1a"
-edge [color="#ffffff", fontcolor="#ffffff"]
-node [style=filled, fillcolor="#ffffff", fontname="Arial", fontsize=10, shape=circle]
-.into_iter().take(100)
-*/
