@@ -6,7 +6,7 @@ pub async fn get_prices() -> Result<String, Box<dyn std::error::Error>> {
         .build()?;
         
     let mut headers = reqwest::header::HeaderMap::new();
-    headers.insert("X-MBX-APIKEY", "4JX50QtAy2BStNhTLb7hxCaWQhcMV8P41KNIlh0RuadLxgTQ6tbemNCohEKqXD22".parse()?);
+    headers.insert("X-MBX-APIKEY", "API-KEY".parse()?);
 
     let request = client.request(reqwest::Method::GET, "https://api.binance.com/api/v3/ticker/price")
         .headers(headers);
